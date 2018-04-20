@@ -1,179 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display:400,700,900');
+* {
+  margin: 0;
+  box-sizing: border-box; }
 
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-    
-html{
-    font-size: 62.5%;
-    /* font-family: 'Open Sans', sans-serif;
-    font-family: 'Playfair Display', serif; */
-}
+html {
+  font-size: 14px;
+  font-size: 62.5%;
+  font-family: sans-serif; }
 
-h1{
-    font-family: 'Open Sans';
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #FF644E;
-    text-transform: uppercase;
-    margin: 2rem 0 2rem 0;
+body {
+  font-size: 14px;
+  font-size: 1.4rem; }
 
-}
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #fbfbfb;
+  text-align: center; }
 
-a:link{text-decoration: none;}
-a:hover {color: white;}
-a:visited{color: white;}
+a {
+  text-decoration: none;
+  color: inherit; }
 
-/* HEADER */
+h4 {
+  font-size: 18px;
+  font-size: 1.8rem; }
 
-header{
-    height: 5rem;
-    width: 100%;
-    background-color: #001128;
-    position: fixed;
-    text-align: center;
-    top: 0;
-}
+.cleaner {
+  clear: both; }
 
-nav{
-    /* float: right; */
-    display: block;
-    line-height: 3rem;
-
-}
-
-
-.main-nav li{
-    
-    display: inline-block;
-    position: relative;
-    color: white;
-    list-style: none;
-    font-size: 1.2rem;
-    font-family: 'Open Sans';
-    font-weight: 100;
-    text-align: left;
-    padding: 1rem 2rem 1rem 2rem;
-    min-width: 5rem;
-
-}
-
-.secondary-nav{
-    position: absolute;
-    background:#FF644E;
-    top: 5rem;
-    padding: 0;
-    line-height: 1.5rem;
-    width: 15rem;
-    height: 0;
-    overflow: hidden;
-
-    transition: height 1s ease;
-
-}
-
-.main-nav li:hover .secondary-nav{
-    height: 15rem;
-}
-
-
-
-/* HOME */
-
-.back-home{
-    height: 57.4rem;
-    width: 100%;
-    background-image: url("../img/pj-header.png");
-    background-position: center center;
-    background-size: cover;
-    margin: 5rem 0 0 0;
-}
-
-.main-title{
-    color: white;
-    font-family: playfair Display;
-    font-weight: 700;
-    font-size: 20rem;
-    line-height: 13.8rem;
-
-    padding: 8rem;
-}
-
-.barra-roja{
-    background: #FF644E;
-    width: 100%;
-    height: 4rem;
-    box-shadow:0 0 1rem black;
-}
-
-/* LA BANDA */
-
-.column-banda{
-    width: 33.3%; 
-    float: left;
-    padding: 3rem;
-    font-size: 1.2rem;
-    align-content: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 200;
-
-}
-
-.cleaner{
-    clear: both;
-}
-
-.la-banda-container{
-    /* background-color: #F5F5F5; */
-    text-align: center;
-    
-}
-
-.la-banda-main{
-    text-align: center;
-    padding: 4rem;
-}
-
-.foto-circular-banda{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border-color: #FF644E;
-    border-style: solid;
-    border-width: 1rem;
-    margin: auto;
-
-    transition: transform 0.5s linear, border-width 0.5s linear;
-}
-
-.foto-circular-banda:hover{
-    transform: scale(1.03);
-    border-width: 0;
-}
-
-
-
-.foto-circular-banda img{
-    width: 100%;
-    height: 100%;
-
-}
-
-.titulo-integrante{
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.7rem;
-    padding: 2rem 0 1rem 0;
-}
-
-.linea-negra{
-    border-style: solid;
-    border-bottom: black;
-    border-width: 0.1rem;
-    margin: 1rem 0 1rem 0;
-}
-
-
-
+.wrapper {
+  margin-right: 2rem;
+  margin-left: 2rem; }
