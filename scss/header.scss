@@ -1,0 +1,56 @@
+body {
+    position:relative;
+}
+main {overflow:hidden;}
+
+header{
+    height: 5rem;
+    width: 100%;
+    background-color: #001128;
+    position: fixed;
+    text-align: center;
+    top: 0;
+}
+
+nav{
+    /* float: right; */
+    display: block;
+    line-height: 3rem;
+
+}
+
+
+.main-nav li{
+    
+    display: inline-block;
+    position: relative;
+    color: white;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Open Sans';
+    font-weight: 100;
+    text-align: left;
+    padding: 1rem 2rem 1rem 2rem;
+    min-width: 5rem;
+
+}
+
+.secondary-nav{
+    position: absolute;
+    background:#FF644E;
+    top: 5rem;
+    padding: 0;
+    line-height: 1.5rem;
+    width: 15rem;
+    height: 0;
+    overflow: hidden;
+
+    transition: height 1s ease;
+
+}
+
+.main-nav li:hover .secondary-nav{
+    height: 15rem;
+}
+
+
