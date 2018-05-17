@@ -1,8 +1,25 @@
 .history-container{
    background: $red;
     text-align: center;
-    padding: 10rem 30rem 15rem 30rem;
-    color: $secondary-color;
+    padding:5rem 2.4rem 5rem 2.4rem;
     font-size: 1.2rem;
-h1{ color: $secondary-color;}    
+    line-height: 1.8rem;
+    color: $secondary-color;
+        h1{ color: $secondary-color;}    
+ }
+
+@media (min-width: 768px){
+    .history-container{
+        text-align: center;
+        padding:8rem 8rem 12rem 8rem;
+        line-height: 1.8rem;
+        }
+}
+
+@media (min-width: 1024px) {
+    .history-container{
+        text-align: center;
+        padding:10rem 30rem 15rem 30rem;
+        line-height: 1.8rem;
+        }
 }

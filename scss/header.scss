@@ -6,35 +6,24 @@ main {overflow:hidden;}
 header{
     height: 5rem;
     width: 100%;
-    background-color: #001128;
+    background-color: $text-color;
     position: fixed;
+    display: flex;
+    justify-content: center;
     text-align: center;
     top: 0;
+    z-index: 10000;
 }
 
 nav{
-    /* float: right; */
     display: block;
     line-height: 3rem;
-
+   width: 80%;
 }
 
-
-.main-nav li{
-    
-    display: inline-block;
-    position: relative;
-    color: white;
-    list-style: none;
-    font-size: 1.2rem;
-    font-family: 'Open Sans';
-    font-weight: 100;
-    text-align: left;
-    padding: 1rem 2rem 1rem 2rem;
-    min-width: 5rem;
-
+.main-nav li{ 
+    display: none;
 }
-
 .secondary-nav{
     position: absolute;
     background:#FF644E;
@@ -44,9 +33,7 @@ nav{
     width: 15rem;
     height: 0;
     overflow: hidden;
-
     transition: height 1s ease;
-
 }
 
 .main-nav li:hover .secondary-nav{
@@ -54,3 +41,81 @@ nav{
 }
 
 
+.ham-button {
+	color: white;
+	width: 6rem;
+	display: flex;
+	align-items: center;
+    padding: 2rem;
+}
+
+.close-button {
+	color: white;
+	height: 10rem;
+	width: 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#secondary-nav {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	color: white;
+	z-index: 10000;
+	background-color: $text-color;
+	width: 100vw;
+	height: 100vh;
+}
+
+#secondary-nav ol {
+	display: block;
+	position: relative;
+	margin: 0;
+	height: 100%;
+	background-color: $red;
+	margin-right: 20%;
+	padding: 3rem;
+	padding-right: 5rem;
+}
+
+#secondary-nav li {
+	list-style-type: none;
+	height: 3rem;
+	margin: 1rem;
+	padding-left: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+#secondary-nav li:hover {
+	cursor: pointer;
+	background-color: grey;
+}
+
+#hidden-button:checked + #secondary-nav {
+	display: block;
+}
+  
+@media (min-width: 768px){
+    .main-nav li{ 
+        display: inline-block;
+            position: relative;
+            color: white;
+            list-style: none;
+            font-size: 1.2rem;
+            font-family: 'Open Sans';
+            font-weight: 100;
+            text-align: left;
+            padding: 1rem 2rem 1rem 2rem;
+            min-width: 5rem;
+		}
+		.ham-button {
+			display: none;
+		}
+}

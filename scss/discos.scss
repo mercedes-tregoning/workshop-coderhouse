@@ -1,15 +1,12 @@
 .discos-main{
-    padding:10rem 0 10rem 0;
+    padding:0 0 4rem 0;
     .grid-content-discos{
         display: grid;
-        grid-template-columns: 3fr 3fr 3fr 3fr;
-        grid-template-rows: 3fr 3fr 3fr 3fr;
+        grid-template-columns: 12;
         justify-content: center;
         align-content: center;
         grid-gap: 0;
-        padding: 5rem 0 5rem 0;
     }
-
 
     img {
         width: 100%;
@@ -22,29 +19,26 @@
     .grid-item-discos{
     justify-items: center;
     align-items: center;
-    // transition: .5s ease;
     }
 
     .container-disco{
-            position: relative;
+        position: relative;
     }
 
     .placa-text-disco{
-        transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;   
+        transition: opacity .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;   
     }
 
     .text-disco{
         color: $text-color;
         opacity: 0;
-        transition: .5s ease;
-
+        transition: opacity .5s ease;
     }
 
     .container-disco:hover img {
@@ -67,3 +61,96 @@
         font-size: 1.4rem;
     }
 }
+
+@media (min-width: 768px){
+    .discos-main{
+        padding:10rem 0 10rem 0;
+        .grid-content-discos{
+            grid-template-columns: 4fr 4fr 4fr;
+            grid-template-rows: 4fr 4fr 4fr;
+            justify-content: center;
+            align-content: center;
+            grid-gap: 0;
+            padding: 5rem 8rem 5rem 8rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .discos-main{
+        padding:10rem 0 5rem 0;
+        .grid-content-discos{
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            grid-template-rows: 4fr 4fr 4fr;
+            justify-content: center;
+            align-content: center;
+            grid-gap: 0;
+            padding: 5rem 15rem 0rem 15rem;
+        }
+    }
+}
+
+
+
+// .discos-main{
+//     padding:10rem 0 10rem 0;
+//     .grid-content-discos{
+//         display: grid;
+//         grid-template-columns: 3fr 3fr 3fr 3fr;
+//         grid-template-rows: 3fr 3fr 3fr 3fr;
+//         justify-content: center;
+//         align-content: center;
+//         grid-gap: 0;
+//         padding: 5rem 0 5rem 0;
+//     }
+
+//     img {
+//         width: 100%;
+//         height: auto;
+//         transition: .5s ease;
+//         opacity: 1;
+//         display: block;
+//     }
+
+//     .grid-item-discos{
+//     justify-items: center;
+//     align-items: center;
+//     }
+// }
+// .container-disco{
+//     position: relative;
+// }
+// .placa-text-disco{
+//     display: none;
+//     position: absolute;
+//     transition: opacity .5s ease;
+//     background: $secondary-color;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: center;
+// }
+// .text-disco{
+//     color: $text-color;
+//     transition: opacity .5s ease;
+// }    
+
+// .container-disco:hover .placa-text-disco{
+//     display: block;    
+//     opacity: 0.8;
+//     .text-disco{
+//         opacity: 1;
+//     }
+// }
+//     .name-disco{
+//     letter-spacing: 0.5rem;
+//     font-size: 1.3rem;
+//     }
+//     .year-disco{
+//         padding-top: 1rem;
+//         font-family: $titles-font;
+//         font-size: 1.4rem;
+//     }

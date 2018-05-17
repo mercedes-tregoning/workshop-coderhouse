@@ -8,10 +8,16 @@
   <title>PEARL JAM</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+  integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+  crossorigin="anonymous">
 </head>
 
 <body>
   <header>
+      <label class="ham-button" for="hidden-button">
+          <i class="fas fa-bars"></i>
+      </label>
     <nav>
       <ol class="main-nav">
         <li>
@@ -35,11 +41,40 @@
           <a href="#contact">Contacto</a>
         </li>
       </ol>
-
     </nav>
+
+    <input type="checkbox" name="" id="hidden-button" hidden>
+    <nav id="secondary-nav">
+      <ol>
+        <label class="close-button" for="hidden-button">
+          <i class="fas fa-times"></i>
+        </label>
+        <a href="#about">
+          <li class="secondary-li">
+            La banda
+          </li>
+        </a>
+        <a href="#history">
+          <li class="secondary-li">
+            Historia
+          </li>
+        </a>
+        <a href="#discography">
+          <li class="secondary-li">
+            Discografía
+          </li>
+        </a>
+        <a href="#contact">
+          <li class="secondary-li">
+            Contacto
+          </li>
+        </a>
+      </ol>
+    </nav>
+              
   </header>
   <main>
-    <div class="home">
+    <div class="home" id="home">
       <div class="back-home">
         <div class="main-title">Pearl
           <br>Jam.</div>
@@ -47,8 +82,7 @@
       <div class="barra-roja">
       </div>
     
-      <section class="la-banda-main wrapper">
-        <!-- <h1>La banda</h1> -->
+      <section class="la-banda-main wrapper" id="about">
         <div class="la-banda-flex">
           <div class="column-banda">
             <div class="foto-circular-banda">
@@ -104,7 +138,7 @@
         </div>
       </section>
 
-    <section class="history-container">
+    <section class="history-container" id="history">
       <h1>Historia</h1>
       <div>
         <p>La historia de Pearl Jam se remonta a la década de 1980. Los orígenes de la banda se encuentran en Green River, grupo
@@ -119,7 +153,7 @@
 
     </section>
 
-    <section class="wrapper discos-main">
+    <section class="wrapper discos-main" id="discography">
       <h1>Discografía</h1>
       <div class="grid-content-discos">
         <div class="grid-item-discos">
@@ -232,48 +266,86 @@
             </div>
           </div>
         </div>
+        <div class="grid-item-discos">
+          <div class="container-disco">
+            <img src="./img/vs.jpg" alt="Tapa de disco">
+            <div class="placa-text-disco">
+              <div class="text-disco">
+                <p class="name-disco">VS</p>
+                <p class="year-disco">1993</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="grid-item-discos">
+          <div class="container-disco">
+            <img src="./img/riotact.jpg" alt="Tapa de disco">
+            <div class="placa-text-disco">
+              <div class="text-disco">
+                <p class="name-disco">RIOT ACT</p>
+                <p class="year-disco">2002</p>
+              </div>
+            </div>
+          </div>
+        </div>       
       </div>
     </section>
-    <section>
-      <h1>Contacto</h1>
-      <form>
-        <label for="firstName">
-          Nombre
-          <input type="text" name="firstName" id="firstName">
-        </label>
-        <label for="lastName">
-          Apellido
-          <input type="text" name="lastName" id="lastName">
-        </label>
-        <div>
-          <h4>Genéro</h4>
-          <label for="male">
-            Masculino
-            <input type="radio" name="gender" id="male" value="male">
-          </label>
-          <label for="female">
-            Femenino
-            <input type="radio" name="gender" id="female" value="female">
-          </label>
-          <label for="other">
-            Otro
-            <input type="radio" name="gender" id="other" value="other">
-          </label>
-        </div>
-        <div>
-          <select name="country" id="country" required>
-            <option value="">País de residencia</option>
-            <option value="AR">Argentina</option>
-            <option value="CH">Chile</option>
-            <option value="UR">Uruguay</option>
-            <option value="MX">México</option>
-          </select>
-        </div>
 
-        <input type="reset" class="boton">
-        <input type="submit" class="boton">
-      </form>
-    </section>
+ <div class="contacto-main" id="contact">
+  <form>
+    <ul class="flex-outer">
+      <li>
+        <label for="first-name">Nombre</label>
+        <input type="text" id="first-name" placeholder="Escriba su nombre aquí">
+      </li>
+      <li>
+        <label for="last-name">Apellido</label>
+        <input type="text" id="last-name" placeholder="Escriba su apellido aquí">
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Escriba su email aquí">
+      </li>
+      <li>
+        <p>Género</p>
+        <ul class="flex-inner">
+          <li>
+            <input type="checkbox" id="female">
+            <label for="female">Femenino</label>
+          </li>
+          <li>
+            <input type="checkbox" id="male">
+            <label for="male">Masculino</label>
+          </li>
+          <li>
+            <input type="checkbox" id="other">
+            <label for="other">Otro</label>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>País de residencia</p>
+          <select name="country" id="country" required>
+          <option value="">Seleccione su país de residencia</option>
+          <option value="AR">Argentina</option>
+          <option value="CH">Chile</option>
+          <option value="UR">Uruguay</option>
+          <option value="MX">México</option>
+        </select>
+      </li>
+
+      <li>
+        <label for="message">Mensaje</label>
+        <textarea rows="6" id="message" placeholder="Deje su mensaje..."></textarea>
+      </li>
+      <li class="botonera">
+        <button type="submit">Enviar</button>
+        <button type="reset">Recargar</button>
+      </li>
+    </ul>
+  </form>
+</div>
+
   </main>
   <footer>
     <span>Pearl Jam- 2018</span>

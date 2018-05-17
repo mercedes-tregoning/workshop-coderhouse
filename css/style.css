@@ -49,7 +49,8 @@ header {
   background-color: #001128;
   position: fixed;
   text-align: center;
-  top: 0; }
+  top: 0;
+  z-index: 10000; }
 
 nav {
   /* float: right; */
@@ -137,7 +138,7 @@ nav {
   transition: transform 0.5s linear, border-width 0.5s linear; }
 
 .foto-circular-banda:hover {
-  transform: scale(1.03);
+  transform: scale(1.03) rotateY(180deg);
   border-width: 0; }
 
 .foto-circular-banda img {
@@ -184,7 +185,7 @@ nav {
   .discos-main .container-disco {
     position: relative; }
   .discos-main .placa-text-disco {
-    transition: .5s ease;
+    transition: opacity .5s ease;
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -195,7 +196,7 @@ nav {
   .discos-main .text-disco {
     color: #001128;
     opacity: 0;
-    transition: .5s ease; }
+    transition: opacity .5s ease; }
   .discos-main .container-disco:hover img {
     opacity: 0.1; }
   .discos-main .container-disco:hover .placa-text-disco {
