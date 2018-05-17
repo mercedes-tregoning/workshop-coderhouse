@@ -64,7 +64,6 @@ nav {
 
 .secondary-nav {
   position: absolute;
-  background: #FF644E;
   top: 5rem;
   padding: 0;
   line-height: 1.5rem;
@@ -93,6 +92,8 @@ nav {
   position: absolute;
   right: 0;
   top: 0; }
+  .close-button li {
+    background-color: #FF644E; }
 
 #secondary-nav {
   position: fixed;
@@ -124,8 +125,7 @@ nav {
   align-items: center; }
 
 #secondary-nav li:hover {
-  cursor: pointer;
-  background-color: grey; }
+  cursor: pointer; }
 
 #hidden-button:checked + #secondary-nav {
   display: block; }

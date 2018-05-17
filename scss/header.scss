@@ -26,7 +26,6 @@ nav{
 }
 .secondary-nav{
     position: absolute;
-    background:#FF644E;
     top: 5rem;
     padding: 0;
     line-height: 1.5rem;
@@ -59,6 +58,9 @@ nav{
 	position: absolute;
 	right: 0;
 	top: 0;
+	li{
+		background-color: $red;
+	}
 }
 
 #secondary-nav {
@@ -95,7 +97,6 @@ nav{
 
 #secondary-nav li:hover {
 	cursor: pointer;
-	background-color: grey;
 }
 
 #hidden-button:checked + #secondary-nav {
